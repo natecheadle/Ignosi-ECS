@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg-configuration.schema.json",
+  "default-registry": {
+    "kind": "git",
+    "repository": "https://github.com/Microsoft/vcpkg",
+    "baseline": "ad25766aefb5313b6bc4e2a4b78a2946f84fbf66"
+  },
+  "registries": [
+    {
+      "kind": "git",
+      "repository": "https://github.com/natecheadle/Ignosi-VCPKG",
+      "baseline": "5a42bea87a9e6f2ccdb5871e3cf7ccdf68acb0be",
+      "packages": [
+        "ignosi*"
+      ]
+    }
+  ]
+}
