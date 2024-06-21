@@ -10,4 +10,5 @@ add_library(${PROJECT_NAME} STATIC "entity.cpp" "system.cpp")
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_LIST_DIR}
                                                   ${IGNOSI_MEMORY_INC})
-target_link_libraries(${PROJECT_NAME} PRIVATE ignosi-memory)
+target_link_libraries(${PROJECT_NAME}
+                      PUBLIC ignosi-memory::ignosi-memory-allocate)
