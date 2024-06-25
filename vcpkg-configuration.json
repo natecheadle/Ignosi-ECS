@@ -9,7 +9,7 @@
     {
       "kind": "git",
       "repository": "https://github.com/natecheadle/Ignosi-VCPKG",
-      "baseline": "6083fdc411c92c155fa359a87f9b79124257a485",
+      "baseline": "4f9ce6f18d62940b9017da5837e3a68b9f6b220b",
       "packages": [
         "ignosi*"
       ]
