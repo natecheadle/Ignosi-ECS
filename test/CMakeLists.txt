@@ -6,7 +6,7 @@ include(GoogleTest)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(${PROJECT_NAME} "main.cpp")
+add_executable(${PROJECT_NAME} "main.cpp" "world_tests.cpp")
 
 find_package(GTest CONFIG REQUIRED)
 
