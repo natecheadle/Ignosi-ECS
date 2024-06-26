@@ -12,17 +12,24 @@ class World;
 class Entity {
   friend World;
 
-  World* m_pWorld;
-
   std::bitset<64> m_Components;
   std::uint32_t m_ID;
 
-  Entity(World* pWorld, std::uint32_t id);
+  Entity(std::uint32_t id);
+
+  void RegisterComponent(const IComponent& component);
+  void RemoveComponent(const IComponent& component);
 
  public:
   std::uint32_t ID() const;
 
-  void RegisterComponent(const IComponent& component);
-  void RemoveComponent(const IComponent& component);
+  const std::bitset<64>& RegisteredComponents() const;
+
+  friend bool operator==(const Entity& lhs, const Entity& rhs);
+  friend bool operator!=(const Entity& lhs, const Entity& rhs);
+  friend bool operator<(const Entity& lhs, const Entity& rhs);
+  friend bool operator<=(const Entity& lhs, const Entity& rhs);
+  friend bool operator>(const Entity& lhs, const Entity& rhs);
+  friend bool operator>=(const Entity& lhs, const Entity& rhs);
 };
 }  // namespace ignosi::ecs
